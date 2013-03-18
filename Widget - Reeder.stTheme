@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>author</key>
+	<string>hyspace</string>
+	<key>comment</key>
+	<string>A widget theme for the UI components of the Reeder theme, which is forked form Ayin theme.</string>
+	<key>name</key>
+	<string>Reeder - Widget Theme</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#F9F8F6</string>
+				<key>caret</key>
+				<string>#615649</string>
+				<key>foreground</key>
+				<string>#7D6852</string>
+				<key>invisibles</key>
+				<string>#3B3A32</string>
+				<key>selection</key>
+				<string>#DBCEBF</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
