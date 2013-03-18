@@ -86,8 +86,8 @@
 	//	- Inactive tab label
 	{
 		"class": "tab_label",
-		"fg": [80, 70, 90],
-		"shadow_color": [255, 255, 255, 160],
+		"fg": [60, 50, 70],
+		"shadow_color": [255, 255, 255, 120],
 		"shadow_offset": [0, 1]
 	},
 
@@ -95,9 +95,9 @@
 	{
 		"class": "tab_label",
 		"parents": [{"class": "tab_control", "attributes": ["selected"]}],
-		"shadow_color": [255, 255, 255, 255],
+		"shadow_color": [255, 255, 255, 120],
 		"shadow_offset": [0, 1],
-		"fg": [73, 64, 85, 255]
+		"fg": [33, 24, 45, 255]
 	},
 
 	// - Dirty inactive tab label
@@ -389,7 +389,7 @@
 	{
 		"class": "label_control",
 		"parents": [{"class": "status_bar"}],
-		"font.size": 10,
+		"font.size": 10, 
 		"color": [73, 64, 85],
 		"shadow_color": [255, 255, 255, 160],
 		"shadow_offset": [0, 1]
@@ -405,7 +405,6 @@
 		"layer0.tint": [92, 92, 92],
 		"layer0.opacity": 1.0,
 		"layer0.draw_center": false,
-		"layer0.inner_margin": [0, 0, 1, 0],
 		"content_margin": [0, 0, 1, 0]
 	},
 	//	- Sidebar tree (bg)
@@ -416,7 +415,9 @@
 		"indent": 15,
 		"indent_offset": 13,
 		"indent_top_level": false,
-		"layer0.tint": [203, 203, 203],	// darker gray
+		// "layer0.tint": [228, 225, 210],	// darker gray
+		"layer0.texture": "Theme - Nil/assets/ayin/bg.png",
+		"layer0.inner_margin": [8, 8],
 		"layer0.opacity": 1.0
 	},
 	//	- Sidebar rows
@@ -428,7 +429,7 @@
 		"layer1.opacity": 0.0,
 		"layer1.inner_margin": [8, 3]
 	},
-	//	- Sidebar row selected
+	//	- Sidebar row selected 
 	{
 		"class": "tree_row",
 		"attributes": ["selected"],
@@ -437,7 +438,7 @@
 	//	- Sidebar heading
 	{
 		"class": "sidebar_heading",
-		"color": [100, 100, 100],
+		"color": [50, 50, 50],
 		"font.bold": true,
 		"shadow_color": [255, 255, 255, 160],
 		"shadow_offset": [0, 1]
@@ -450,14 +451,15 @@
 	//	- Sidebar entry label
 	{
 		"class": "sidebar_label",
-		"color": [73, 64, 85],
-		"shadow_color": [255, 255, 255],
+		"color": [23, 14, 35],
+		"shadow_color": [255, 255, 255, 160],
 		"shadow_offset": [0, 1]
 	},
 	{
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-		"color": [100, 40, 140]
+		"color": [116, 55, 10]
+		// "color": [60, 40, 140]
 	},
 	{
 		"class": "sidebar_label",
@@ -469,19 +471,20 @@
 	{	//	Sidebar selected entry label
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
-		"color": [90, 64, 100],
-		"shadow_color": [255, 255, 255, 160],
+		//"color": [90, 64, 100],
+		"color": [116, 55, 10],
+		"shadow_color": [255, 255, 255, 120],
 		"shadow_offset": [0, 1]
 	},
 
 	//	- Sidebar open files close/dirty
 	{
 		"class": "close_button",
-		"layer0.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-hover.png",
+		"layer0.texture": "Theme - Nil/assets/ayin/tab-button-close-hover.png",
 		"layer0.opacity": 0.75,
 		"layer0.inner_margin": 4,
 		"layer1.opacity": 0.0,
-		"layer1.texture":  "Theme - Nil/assets/tab-buttons/tab-button-close.png",
+		"layer1.texture":  "Theme - Nil/assets/ayin/tab-button-close.png",
 		"layer1.inner_margin": 4,
 		"content_margin": [8, 8]
 	},
@@ -494,21 +497,21 @@
 	{
 		"class": "close_button",
 		"attributes": ["hover"],
-		"layer0.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-hover.png",
+		"layer0.texture": "Theme - Nil/assets/ayin/tab-button-close-hover.png",
 		"layer1.opacity": 0.75,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close.png"
+		"layer1.texture": "Theme - Nil/assets/ayin/tab-button-close.png"
 	},
 	{
 		"class": "close_button",
 		"attributes": ["hover", "dirty"],
 		"layer1.opacity": 0.75,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-dirty.png"
+		"layer1.texture": "Theme - Nil/assets/ayin/tab-button-close-dirty.png"
 	},
 	{
 		"class": "close_button",
 		"attributes": ["pressed"],
 		"layer1.opacity": 1.0,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close.png"
+		"layer1.texture": "Theme - Nil/assets/ayin/tab-button-close.png"
 	},
 	{
 		"class": "close_button",
