@@ -319,7 +319,7 @@
 
 	{
 		"class": "minimap_control",
-		"viewport_color": [185, 185, 185, 50]
+		"viewport_color": [185, 185, 185, 75]
 	},
 
 
@@ -417,7 +417,7 @@
 		"indent_top_level": false,
 		// "layer0.tint": [228, 225, 210],	// darker gray
 		"layer0.texture": "Theme - Nil/assets/ayin/bg.png",
-		"layer0.inner_margin": [8, 8],
+		"layer0.inner_margin": [3, 3],
 		"layer0.opacity": 1.0
 	},
 	//	- Sidebar rows
