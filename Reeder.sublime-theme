@@ -141,7 +141,7 @@
 	{
 		"class": "tab_close_button",
 		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close-dirty.png"
+		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close.png"
 	},
 	{
 		//	- Tab close hover action
@@ -310,7 +310,7 @@
 	{
 		"class": "grid_layout_control",
 		"border_size": 1,
-		"border_color": [92, 92, 92]
+		"border_color": [127, 127, 127]
 	},
 
 
@@ -402,7 +402,7 @@
 	//	- Sidebar container (border)
 	{
 		"class": "sidebar_container",
-		"layer0.tint": [92, 92, 92],
+		"layer0.tint": [127, 127, 127],
 		"layer0.opacity": 1.0,
 		"layer0.draw_center": false,
 		"content_margin": [0, 0, 1, 0]
@@ -466,7 +466,7 @@
 		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
 		"settings": ["bold_folder_labels"],
 		"font.bold": true,
-		"color": [90, 64, 130]	// text is bold, so make the color a bit sublter
+		"color": [116, 55, 10]	// text is bold, so make the color a bit sublter
 	},
 	{	//	Sidebar selected entry label
 		"class": "sidebar_label",
@@ -703,7 +703,7 @@
 	},
 	{
 		"class": "auto_complete_label",
-		"fg": [92, 92, 92],
+		"fg": [127, 127, 127],
 		"match_fg": [252, 113, 2],
 		"bg": [240, 240, 240],
 		"selected_fg": [161, 70, 0],
