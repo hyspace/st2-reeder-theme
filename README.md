@@ -31,7 +31,7 @@ this theme contains a copy of [Earthsong Light](https://github.com/daylerees/col
 Installation
 ------------------------------------------------------------------------
 
-This installation info is based on [Nil theme](https://github.com/nilium/st2-nil-theme/)'s installation info.
+This installation info is based on [Nil theme](https://github.com/nilium/st2-nil-theme/)'s installation info.∏
 
 #### Installation via Git
 
