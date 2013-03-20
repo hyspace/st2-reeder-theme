@@ -65,19 +65,20 @@
 		"layer0.texture": "Theme - Reeder/assets/reeder/tabs/tab-active.png",
 		"layer1.opacity": 0.0
 	},
-	{
-		"class": "tab_control",
-		"settings": ["highlight_modified_tabs"],
-		"attributes": ["dirty"],
-		"layer0.texture": "Theme - Reeder/assets/reeder/tabs/tab-inactive-modified.png",
-		"layer1.texture": "Theme - Reeder/assets/reeder/tabs/tab-hover-dirty.png"
-	},
-	{
-		"class": "tab_control",
-		"settings": ["highlight_modified_tabs"],
-		"attributes": ["dirty", "selected"],
-		"layer0.texture": "Theme - Reeder/assets/reeder/tabs/tab-active-modified.png"
-	},
+	// {
+	// 	"class": "tab_control",
+	// 	"settings": ["highlight_modified_tabs"],
+	// 	"attributes": ["dirty"],
+	// 	"layer0.texture": "Theme - Reeder/assets/reeder/tabs/tab-inactive-modified.png",
+	// 	"layer0.inner_margin": [30, 1, 14, 6],
+	// 	"layer1.texture": "Theme - Reeder/assets/reeder/tabs/tab-hover-dirty.png"
+	// },
+	// {
+	// 	"class": "tab_control",
+	// 	"settings": ["highlight_modified_tabs"],
+	// 	"attributes": ["dirty", "selected"],
+	// 	"layer0.texture": "Theme - Reeder/assets/reeder/tabs/tab-active-modified.png"
+	// },
 
 
 	//	- Tab labels
@@ -103,14 +104,14 @@
 	// - Dirty inactive tab label
 	{
 		"class": "tab_label",
-		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+		"parents": [{"class": "tab_close_button", "attributes": ["dirty"]}],
 		"settings": ["highlight_modified_tabs"]
 	},
 
 	// - Dirty active tab label
 	{
 		"class": "tab_label",
-		"parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
+		"parents": [{"class": "tab_close_button", "attributes": ["selected", "dirty"]}],
 		"settings": ["highlight_modified_tabs"]
 	},
 
@@ -121,16 +122,16 @@
 	//	- Tab button
 	{
 		"class": "tab_close_button",
-		"content_margin": [0, 0],
+		"content_margin": [8, 8],
 
 		//	- Tab close default settings
-		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close.png",
-		"layer1.opacity": 0.0, // hide by default
-		"layer1.inner_margin": 0.0,
+		"layer0.texture": "Theme - Reeder/assets/tab-buttons/button-close-dirty.png",
+		"layer0.opacity": 0.0, // hide by default
+		"layer0.inner_margin": 0.0,
 
 		//	- Tab close hover settings	
-		"layer0.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close-hover.png",
-		"layer0.opacity": 0.0
+		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close.png",
+		"layer1.opacity": 0.0
 	},
 	{
 		//	- Tab button size
@@ -138,31 +139,48 @@
 		"settings": ["show_tab_close_buttons"],
 		"content_margin": [8, 8]
 	},
+		//  - Tab modified icon
 	{
 		"class": "tab_close_button",
 		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close.png"
+		"settings": ["highlight_modified_tabs"],
+		"layer0.opacity": 0.5
+	},
+	{
+		"class": "tab_close_button",
+		"parents": [{"class": "tab_control", "attributes": ["dirty","selected"]}],
+		"settings": ["highlight_modified_tabs"],
+		"layer0.opacity": 0.75
 	},
 	{
 		//	- Tab close hover action
 		"class": "tab_close_button",
 		"parents": [{"class": "tab_control", "attributes": ["hover"]}],
-		"layer1.opacity": 0.0,
-		"layer0.opacity": 1.0
+		"layer0.opacity": 0.0,
+		"layer1.opacity": 0.5
+	},
+	{
+		//	- Tab close hover action
+		"class": "tab_close_button",
+		"parents": [{"class": "tab_control", "attributes": ["hover","dirty"]}],
+		"settings": ["highlight_modified_tabs"],
+		"layer0.opacity": 0.0,
+		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close-dirty-hover.png",
+		"layer1.opacity": 0.5
 	},
 	{
 		//	- Tab close press action
 		"class": "tab_close_button",
 		"attributes": ["hover"],
-		"layer1.opacity": 0.4,
-		"layer0.opacity": 1.0
+		"layer0.opacity": 0.0,
+		"layer1.opacity": 0.75
 	},
 	{
 		//	- Tab close press action
 		"class": "tab_close_button",
 		"attributes": ["pressed"],
-		"layer1.opacity": 1.0,
-		"layer0.opacity": 0.0
+		"layer0.opacity": 0.0,
+		"layer1.opacity": 1.0
 	},
 
 
@@ -435,6 +453,20 @@
 		"attributes": ["selected"],
 		"layer0.opacity": 1.0
 	},
+	// - Sidebar row dirty
+	{
+		"class": "tree_row",
+		"attributes": ["dirty"],
+		"layer0.texture": "Theme - Nil/assets/reeder/tree/row-inactive-modified.png",
+		"layer0.opacity": 1.0
+	},
+	// - Sidebar row selected dirty
+	{
+		"class": "tree_row",
+		"attributes": ["selected", "dirty"],
+		"layer0.texture": "Theme - Nil/assets/dark/row-active-modified.png",
+		"layer0.opacity": 1.0
+	},
 	//	- Sidebar heading
 	{
 		"class": "sidebar_heading",
@@ -451,7 +483,7 @@
 	//	- Sidebar entry label
 	{
 		"class": "sidebar_label",
-		"color": [23, 14, 35],
+		"color": [50, 50, 50],
 		"shadow_color": [255, 255, 255, 160],
 		"shadow_offset": [0, 1]
 	},
@@ -480,44 +512,43 @@
 	//	- Sidebar open files close/dirty
 	{
 		"class": "close_button",
-		"layer0.texture": "Theme - Reeder/assets/reeder/tab-button-close-hover.png",
-		"layer0.opacity": 0.75,
+		"layer0.texture": "Theme - Reeder/assets/tab-buttons/button-close-dirty.png",
+		"layer0.opacity": 0.0,
 		"layer0.inner_margin": 4,
-		"layer1.opacity": 0.0,
-		"layer1.texture":  "Theme - Reeder/assets/reeder/tab-button-close.png",
+		"layer1.texture":  "Theme - Reeder/assets/tab-buttons/sidebar-button-close.png",
+		"layer1.opacity": 0.4,
 		"layer1.inner_margin": 4,
 		"content_margin": [8, 8]
 	},
 	{
 		"class": "close_button",
 		"attributes": ["dirty"],
-		"layer0.texture": "Theme - Reeder/assets/tab-buttons/tab-button-dirty.png",
-		"layer0.opacity": 0.75
+		"layer0.opacity": 0.75,
+		"layer1.opacity": 0.0
 	},
 	{
 		"class": "close_button",
 		"attributes": ["hover"],
-		"layer0.texture": "Theme - Reeder/assets/reeder/tab-button-close-hover.png",
-		"layer1.opacity": 0.75,
-		"layer1.texture": "Theme - Reeder/assets/reeder/tab-button-close.png"
+		"layer1.opacity": 0.75
 	},
 	{
 		"class": "close_button",
 		"attributes": ["hover", "dirty"],
+		"layer0.opacity": 0.0,
 		"layer1.opacity": 0.75,
-		"layer1.texture": "Theme - Reeder/assets/reeder/tab-button-close-dirty.png"
+		"layer1.texture": "Theme - Reeder/assets/tab-buttons/sidebar-button-close-dirty-hover.png"
 	},
 	{
 		"class": "close_button",
 		"attributes": ["pressed"],
-		"layer1.opacity": 1.0,
-		"layer1.texture": "Theme - Reeder/assets/reeder/tab-button-close.png"
+		"layer1.opacity": 1.0
 	},
 	{
 		"class": "close_button",
 		"attributes": ["pressed", "dirty"],
+		"layer0.opacity": 0.0,
 		"layer1.opacity": 1.0,
-		"layer1.texture": "Theme - Reeder/assets/tab-buttons/tab-button-close-dirty.png"
+		"layer1.texture": "Theme - Reeder/assets/tab-buttons/sidebar-button-close-dirty-hover.png"
 	},
 
 	//	- Sidebar group closed

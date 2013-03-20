@@ -51,7 +51,7 @@ Activating
 ------------------------------------------------------------------------
 
 In your `Settings - User` file (hit ⌘, on Mac OS to open it), set the
-`"theme"` key to `"Reeder.sublime-theme"` or `"Ayin.sublime-theme"`, like
+`"theme"` key to `"Reeder.sublime-theme"`, like
 so:
 
     {
